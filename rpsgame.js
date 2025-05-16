@@ -28,15 +28,17 @@ function playRound(huChoice, compChoice){
     const huChoiceLower = huChoice.toUpperCase();
     const compChoiceLower = compChoice.toLowerCase();
 
-    if (huChoiceLower === "rock" && compChoiceLower === "paper"){
+    if (compChoiceLower === huChoiceLower){
+        console.log("It`s a tie. No one wins");
+    }else if (compChoiceLower === "rock" && huChoiceLower === "paper"){
         computerScore++;
-        console.log(`You lose! ${huChoice} beats ${compChoice}`);
-    }else if (huChoiceLower === "paper" && compChoiceLower === "scissors"){
+        console.log(`You lose! ${compChoice} beats ${huChoice}`);
+    }else if (compChoiceLower === "paper" && huChoiceLower === "scissors"){
         computerScore++;
-        console.log(`You lose! ${huChoice} beats ${compChoice}`);
-    }else if (huChoiceLower === "scissors" && compChoiceLower === "rock"){
+        console.log(`You lose! ${compChoice} beats ${huChoice}`);
+    }else if (compChoiceLower === "scissors" && huChoiceLower === "rock"){
         computerScore++;
-        console.log(`You lose! ${huChoice} beats ${compChoice}`);
+        console.log(`You lose! ${compChoice} beats ${huChoice}`);
     }else {
         humanScore++;
         console.log(`You win! ${huChoice} beats ${compChoice}`);
@@ -47,6 +49,7 @@ const huChoice = getHumanChoice();
 const compChoice = getComputerChoice();
 
 playRound(huChoice, compChoice);
+console.log(humanScore, computerScore);
 
 
 
