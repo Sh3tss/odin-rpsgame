@@ -6,7 +6,7 @@ function getComputerChoice(){
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
-const compChoice = getComputerChoice();
+
 console.log(compChoice);
 
 function getHumanChoice(){
@@ -20,7 +20,7 @@ function getHumanChoice(){
         return "scissors"
     }
 }
-const huChoice = getHumanChoice();
+
 console.log(huChoice);
 
 
@@ -42,7 +42,11 @@ function playRound(huChoice, compChoice){
         console.log(`You win! ${huChoice} beats ${compChoice}`);
     }
 }
-console.log(humanScore, computerScore);
+
+const huChoice = getHumanChoice();
+const compChoice = getComputerChoice();
+
+playRound(huChoice, compChoice);
 
 
 
