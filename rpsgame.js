@@ -10,14 +10,14 @@ const compChoice = getComputerChoice();
 console.log(compChoice);
 
 function getHumanChoice(){
-    const humanChoice = Number(window.prompt("Choose from rock, paper and scrissors"));
-    let aNumber = 0;
+    const humanChoice = window.prompt("Choose from rock, paper and scrissors");
+
     if (humanChoice === "rock"){
-        return aNumber = "rock";
+        return "rock";
     }else if (humanChoice === "paper"){
-        return aNumber = "paper";
+        return "paper";
     }else if (humanChoice === "scissors"){
-        return aNumber = "scissors"
+        return "scissors"
     }
 }
 const huChoice = getHumanChoice();
@@ -48,6 +48,7 @@ function playRound(huChoice, compChoice){
         console.log("You win! Rock beats Scissors")
     }
 }
+console.log(humanScore, computerScore);
 
 
 
