@@ -29,23 +29,17 @@ function playRound(huChoice, compChoice){
     const compChoiceLower = compChoice.toLowerCase();
 
     if (huChoiceLower === "rock" && compChoiceLower === "paper"){
-        computerScore ++;
+        computerScore++;
         console.log("You lose! Paper beats Rock")
     }else if (huChoiceLower === "paper" && compChoiceLower === "scissors"){
-        computerScore ++;
+        computerScore++;
         console.log("You lose! Scissors beats Paper")
     }else if (huChoiceLower === "scissors" && compChoiceLower === "rock"){
-        computerScore ++;
+        computerScore++;
         console.log("You lose! Rock beats Scissors")
-    }else if (huChoiceLower === "paper" && compChoiceLower === "rock"){
-        humanScore ++;
-        console.log("You win! Paper beats Rock")
-    }else if (huChoiceLower === "scissors" && compChoiceLower === "paper"){
-        humanScore ++;
-        console.log("You win! Scissors beats Paper")
-    }else if (huChoiceLower === "rock" && compChoiceLower === "scissors"){
-        humanScore ++;
-        console.log("You win! Rock beats Scissors")
+    }else {
+        humanScore++;
+        console.log(`You win! ${huChoice} beats ${compChoice}`);
     }
 }
 console.log(humanScore, computerScore);
