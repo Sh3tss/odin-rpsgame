@@ -30,13 +30,13 @@ function playRound(huChoice, compChoice){
 
     if (huChoiceLower === "rock" && compChoiceLower === "paper"){
         computerScore++;
-        console.log("You lose! Paper beats Rock");
+        console.log(`You lose! ${huChoice} beats ${compChoice}`);
     }else if (huChoiceLower === "paper" && compChoiceLower === "scissors"){
         computerScore++;
-        console.log("You lose! Scissors beats Paper");
+        console.log(`You lose! ${huChoice} beats ${compChoice}`);
     }else if (huChoiceLower === "scissors" && compChoiceLower === "rock"){
         computerScore++;
-        console.log("You lose! Rock beats Scissors");
+        console.log(`You lose! ${huChoice} beats ${compChoice}`);
     }else {
         humanScore++;
         console.log(`You win! ${huChoice} beats ${compChoice}`);
