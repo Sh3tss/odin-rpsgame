@@ -21,20 +21,20 @@ function getHumanChoice(){
     }
 }
 
-
+//testar usar uma const externa para fazer huchoice e compchoice ficarem lower case ou upper case, usar const huchoiceupper = huchoice.toUpperCase  e .toLowerCasee jogar essas variaveis como parametros em playround
 
 
 function playRound(huChoice, compChoice){
-    
+
     if (compChoice === huChoice){
         console.log("It`s a tie. No one wins");
-    }else if (compChoice === "rock" && huChoice === "paper"){
+    }else if (compChoice === "paper" && huChoice === "rock"){
         computerScore++;
         console.log(`You lose! ${compChoice} beats ${huChoice}`);
-    }else if (compChoice === "paper" && huChoice === "scissors"){
+    }else if (compChoice === "scissors" && huChoice === "paper"){
         computerScore++;
         console.log(`You lose! ${compChoice} beats ${huChoice}`);
-    }else if (compChoice === "scissors" && huChoice === "rock"){
+    }else if (compChoice === "rock" && huChoice === "scissors"){
         computerScore++;
         console.log(`You lose! ${compChoice} beats ${huChoice}`);
     }else {
