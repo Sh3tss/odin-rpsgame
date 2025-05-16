@@ -7,7 +7,7 @@ function getComputerChoice(){
     return choices[randomIndex];
 }
 
-console.log(compChoice);
+
 
 function getHumanChoice(){
     const humanChoice = window.prompt("Choose from rock, paper and scrissors");
@@ -21,11 +21,11 @@ function getHumanChoice(){
     }
 }
 
-console.log(huChoice);
+
 
 
 function playRound(huChoice, compChoice){
-    const huChoiceLower = huChoice.toLowerCase();
+    const huChoiceLower = huChoice.toUpperCase();
     const compChoiceLower = compChoice.toLowerCase();
 
     if (huChoiceLower === "rock" && compChoiceLower === "paper"){
