@@ -6,6 +6,8 @@ function getComputerChoice(){
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
+const compChoice = getComputerChoice();
+console.log(compChoice);
 
 function getHumanChoice(){
     const humanChoice = window.prompt("Choose from rock, paper and scrissors");
@@ -18,7 +20,8 @@ function getHumanChoice(){
         return "scissors"
     }
 }
-
+const huChoice = getHumanChoice();
+console.log(huChoice);
 
 
 function playRound(huChoice, compChoice){
@@ -38,17 +41,8 @@ function playRound(huChoice, compChoice){
         humanScore++;
         console.log(`You win! ${huChoice} beats ${compChoice}`);
     }
-    console.log(humanScore, computerScore);
 }
-function startGame(){
-    const compChoice = getComputerChoice();
-    const huChoice = getHumanChoice();
-    if(huChoice !== null){
-        playRound(huChoice, compChoice);
-    }
-
-}
-
+console.log(humanScore, computerScore);
 
 
 
