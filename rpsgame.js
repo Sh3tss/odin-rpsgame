@@ -48,9 +48,10 @@ function playGame(){
             console.log(`You win! ${huChoiceLower} beats ${compChoiceLower}`);
             }
     }
+    
+    }
     playRound(huSelection, compSelection);
     console.log(humanScore, computerScore);
-    }
     
 }
 
