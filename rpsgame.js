@@ -8,7 +8,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getHumanChoice(){
-    const humanChoice = window.prompt("Choose from rock, paper and scrissors");
+    const humanChoice = window.prompt("Choose from rock, paper and scissors");
 
     if (humanChoice === "rock"){
         return "rock";
@@ -18,12 +18,6 @@ function getHumanChoice(){
         return "scissors"
     }
 }
-
-
-
-
-
-
 
 function playGame(){
     let humanScore = 0;
@@ -35,24 +29,24 @@ function playGame(){
         const compSelection = getComputerChoice();
 
         function playRound(huChoice, compChoice){
-        const huChoiceLower = huChoice.toLowerCase();
-        const compChoiceLower = compChoice.toLowerCase();
+            const huChoiceLower = huChoice.toLowerCase();
+            const compChoiceLower = compChoice.toLowerCase();
 
-        if (compChoiceLower === huChoiceLower){
-        console.log("It`s a tie. No one wins");
-        }else if (compChoiceLower === "paper" && huChoiceLower === "rock"){
-        computerScore++;
-        console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
-        }else if (compChoiceLower === "scissors" && huChoiceLower === "paper"){
-        computerScore++;
-        console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
-        }else if (compChoiceLower === "rock" && huChoiceLower === "scissors"){
-        computerScore++;
-        console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
-        }else {
-        humanScore++;
-        console.log(`You win! ${huChoiceLower} beats ${compChoiceLower}`);
-        }
+            if (compChoiceLower === huChoiceLower){
+            console.log("It`s a tie. No one wins");
+            }else if (compChoiceLower === "paper" && huChoiceLower === "rock"){
+            computerScore++;
+            console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
+            }else if (compChoiceLower === "scissors" && huChoiceLower === "paper"){
+            computerScore++;
+            console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
+            }else if (compChoiceLower === "rock" && huChoiceLower === "scissors"){
+            computerScore++;
+            console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
+            }else {
+            humanScore++;
+            console.log(`You win! ${huChoiceLower} beats ${compChoiceLower}`);
+            }
     }
     playRound(huSelection, compSelection);
     console.log(humanScore, computerScore);
