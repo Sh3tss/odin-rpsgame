@@ -1,13 +1,11 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice(){
     const choices =["rock","paper","scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
 
-
+let humanScore = 0;
+let computerScore = 0;
 
 function getHumanChoice(){
     const humanChoice = window.prompt("Choose from rock, paper and scrissors");
@@ -21,33 +19,38 @@ function getHumanChoice(){
     }
 }
 
-//testar usar uma const externa para fazer huchoice e compchoice ficarem lower case ou upper case, usar const huchoiceupper = huchoice.toUpperCase  e .toLowerCasee jogar essas variaveis como parametros em playround
-
 
 function playRound(huChoice, compChoice){
+    const huChoiceLower = huChoice.toLowerCase();
+    const compChoiceLower = compChoice.toLowerCase();
 
-    if (compChoice === huChoice){
+    if (compChoiceLower === huChoiceLower){
         console.log("It`s a tie. No one wins");
-    }else if (compChoice === "paper" && huChoice === "rock"){
+    }else if (compChoiceLower === "paper" && huChoiceLower === "rock"){
         computerScore++;
-        console.log(`You lose! ${compChoice} beats ${huChoice}`);
-    }else if (compChoice === "scissors" && huChoice === "paper"){
+        console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
+    }else if (compChoiceLower === "scissors" && huChoiceLower === "paper"){
         computerScore++;
-        console.log(`You lose! ${compChoice} beats ${huChoice}`);
-    }else if (compChoice === "rock" && huChoice === "scissors"){
+        console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
+    }else if (compChoiceLower === "rock" && huChoiceLower === "scissors"){
         computerScore++;
-        console.log(`You lose! ${compChoice} beats ${huChoice}`);
+        console.log(`You lose! ${compChoiceLower} beats ${huChoiceLower}`);
     }else {
         humanScore++;
-        console.log(`You win! ${huChoice} beats ${compChoice}`);
+        console.log(`You win! ${huChoiceLower} beats ${compChoiceLower}`);
     }
 }
 
-const huChoice = getHumanChoice();
-const compChoice = getComputerChoice();
+const huSelection = getHumanChoice();
+const compSelection = getComputerChoice();
 
-playRound(huChoice, compChoice);
+playRound(huSelection, compSelection);
 console.log(humanScore, computerScore);
+
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+}
 
 
 
