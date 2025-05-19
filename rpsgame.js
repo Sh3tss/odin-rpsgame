@@ -4,9 +4,6 @@ function getComputerChoice(){
     return choices[randomIndex];
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
 function getHumanChoice(){
     const humanChoice = window.prompt("Choose from rock, paper and scissors");
 
