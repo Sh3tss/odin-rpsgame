@@ -20,17 +20,19 @@ function getHumanChoice(){
 }
 
 
-const huSelection = getHumanChoice();
-const compSelection = getComputerChoice();
 
-playRound(huSelection, compSelection);
-console.log(humanScore, computerScore);
+
+
+
 
 function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
     
-    for(let  i = 0; i <= 5; i++){
-        let humanScore = 0;
-        let computerScore = 0;
+
+    for(let  i = 0; i < 5; i++){
+        const huSelection = getHumanChoice();
+        const compSelection = getComputerChoice();
 
         function playRound(huChoice, compChoice){
         const huChoiceLower = huChoice.toLowerCase();
@@ -52,7 +54,8 @@ function playGame(){
         console.log(`You win! ${huChoiceLower} beats ${compChoiceLower}`);
         }
     }
-    console.log(playRound(huSelection, compSelection));
+    playRound(huSelection, compSelection);
+    console.log(humanScore, computerScore);
     }
     
 }
