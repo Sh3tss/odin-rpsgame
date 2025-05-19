@@ -22,13 +22,9 @@ function getHumanChoice(){
 function playGame(){
     let humanScore = 0;
     let computerScore = 0;
-    const huSelection = getHumanChoice();
-    const compSelection = getComputerChoice();
+    
 
-    for(let  i = 0; i < 5; i++){
-        
-
-        function playRound(huChoice, compChoice){
+    function playRound(huChoice, compChoice){
             const huChoiceLower = huChoice.toLowerCase();
             const compChoiceLower = compChoice.toLowerCase();
 
@@ -48,11 +44,13 @@ function playGame(){
             console.log(`You win! ${huChoiceLower} beats ${compChoiceLower}`);
             }
     }
-    
-    }
-    playRound(huSelection, compSelection);
-    console.log(humanScore, computerScore);
-    
+
+    for(let  i = 0; i < 5; i++){
+        const huSelection = getHumanChoice();
+        const compSelection = getComputerChoice();
+        playRound(huSelection, compSelection);
+        console.log(`Score: You ${humanScore} X Computer: ${computerScore}`)
+    }   
 }
 
 
