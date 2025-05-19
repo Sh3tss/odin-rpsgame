@@ -52,6 +52,7 @@ function playGame(){
         console.log(`You win! ${huChoiceLower} beats ${compChoiceLower}`);
         }
     }
+    console.log(playRound(huSelection, compSelection));
     }
     
 }
