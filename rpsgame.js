@@ -22,11 +22,11 @@ function getHumanChoice(){
 function playGame(){
     let humanScore = 0;
     let computerScore = 0;
-    
+    const huSelection = getHumanChoice();
+    const compSelection = getComputerChoice();
 
     for(let  i = 0; i < 5; i++){
-        const huSelection = getHumanChoice();
-        const compSelection = getComputerChoice();
+        
 
         function playRound(huChoice, compChoice){
             const huChoiceLower = huChoice.toLowerCase();
